@@ -1,0 +1,92 @@
+.form-label {
+  display: block;
+  color: $color-dark;
+}
+.form-input {
+  width: 100%;
+  padding: 8px 0;
+
+  font-size: 16px;
+  color: #000;
+  border-bottom: 1px solid $color-border;
+
+  &:focus {
+    border-color: $color-light;
+  }
+}
+.form-input.error {
+  border-color: $color-error;
+}
+.form-types {
+  input {
+    margin: 0 8px;
+    transform: scale(1.3);
+    filter: hue-rotate(330deg);
+    cursor: pointer;
+  }
+  &:first-child {
+    margin: 0 10px;
+  }
+}
+.form-select {
+  width: 100%;
+  position: relative;
+
+  ul {
+    position: absolute;
+    top: 99%;
+    display: block;
+    width: 100%;
+    z-index: 2;
+
+    background-color: $color-white;
+    border: 1px solid $color-border;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 2px 3px 15px rgba($color: #686868, $alpha: 0.5);
+
+    li {
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &.active,
+      &:hover {
+        background-color: $color-light;
+      }
+    }
+  }
+}
+.form-select-title {
+  color: $color-dark;
+}
+.form-choose {
+  width: 100%;
+  padding: 10px 15px 10px 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  cursor: pointer;
+  border-bottom: 1px solid $color-border;
+
+  .icon {
+    font-size: 16px;
+    color: $color-light;
+  }
+
+  .icon.open {
+    transform: rotate(180deg);
+  }
+}
+.form-select-error {
+  color: $color-error;
+  border-bottom: 1px solid $color-error;
+}
+.form-message {
+  display: block;
+  position: absolute;
+  margin-top: 2px;
+
+  color: $color-error;
+  font-size: 12px;
+}
